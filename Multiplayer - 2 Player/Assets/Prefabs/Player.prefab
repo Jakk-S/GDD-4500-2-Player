@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5882843861916223431}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b0ff9d0abdd4f4a94a03f4441d8cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponStuff
+  damage: 1
 --- !u!70 &5882843861916223431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ GameObject:
   - component: {fileID: 6882930022474775863}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
   <PlayerSlot>k__BackingField: 0
+  maxHealth: 100
+  currentHeatlh: 0
 --- !u!50 &8217859402280946742
 Rigidbody2D:
   serializedVersion: 5
