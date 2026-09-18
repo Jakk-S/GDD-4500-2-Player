@@ -14,10 +14,11 @@ public class FastTutorial : MonoBehaviour
     
     void Awake()
     {
+        DisableMouse();
+        
         _sprGroup = GetComponent<SpriteGroup>();
         _controls = new Controls();
-        
-        _controls.Player.Move.performed += OnMove;
+        _controls.Player.Move.performed += HasMove;
     }
     void Start()
     {
@@ -27,12 +28,18 @@ public class FastTutorial : MonoBehaviour
             .SetLoops(-1, LoopType.Yoyo).SetEase(ease);
     }
 
-    void OnMove(InputAction.CallbackContext context)
+    void HasMove(InputAction.CallbackContext context)
     {
         if (_hasMoved) return;
         DOTween.KillAll();
         _sprGroup.Alpha = 0;
         _hasMoved = true;
+    }
+
+    void DisableMouse()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     
