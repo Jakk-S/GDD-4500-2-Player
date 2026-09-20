@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     
     [SerializeField] private float moveSpeed = 5.0f;
-
+    [SerializeField] private float moveInertia = 0.1f;
     private InputHandler _input;
     private Rigidbody2D _rb;
     
@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        _rb.linearVelocity = _input.moveInput * moveSpeed;
+        Vector2 targetVelocity = _input.moveInput * moveSpeed;
+        
+        _rb.linearVelocity = Vector2.MoveTowards(_rb.linearVelocity, targetVelocity, moveInertia);
     }
 }

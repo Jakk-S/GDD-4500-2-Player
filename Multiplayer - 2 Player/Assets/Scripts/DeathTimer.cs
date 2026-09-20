@@ -9,9 +9,16 @@ public class DeathTimer : MonoBehaviour
     private Controls _controls;
     private bool _hasMoved;
     private bool _gameStarted;
-    
-    void OnEnable() => _controls.Player.Enable();
-    void OnDisable() => _controls.Player.Disable();
+
+    void OnEnable()
+    {
+        _controls.Player.Enable();
+    }
+
+    void OnDisable()
+    {
+        _controls.Player.Disable();
+    }
 
     void Awake()
     {
@@ -36,4 +43,6 @@ public class DeathTimer : MonoBehaviour
         if (_gameStarted) return;
         _gameStarted = true;
     }
+    
+    
 }
