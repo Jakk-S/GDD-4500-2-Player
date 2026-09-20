@@ -1,19 +1,24 @@
 using Damage;
 using UnityEngine;
+using  DG.Tweening;
 using System.Collections.Generic;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private WeaponData data;
     private GameObject owner;
-    //private HashSet<IDamageable> alreadyHit = new();
 
     public void SetOwner(GameObject attacker) => owner = attacker;
 
+    public float rotationSpeed { get; private set; }
+
+    void Start()
+    {
+        rotationSpeed = data.rotSpeed * 100;
+    }
     public void OnCollided(Collision2D collision)
     {
         if (collision.gameObject == owner) return;
         if(!collision.gameObject.TryGetComponent<IDamageable>(out var target)) return;
-        //if (!alreadyHit.Add(target)) return;
 
         var info = new DamageInfo
         {
@@ -23,8 +28,10 @@ public class Weapon : MonoBehaviour
             HitPoint = collision.GetContact(0).point
         };
         
+        DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0f, 0.1f)
+            .SetUpdate(true).SetLink(gameObject) 
+            .OnComplete(() => DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1f, 0.3f).SetUpdate(true)).SetLink(gameObject);
         target.ApplyDamage(info);
     }
-
-    //public void ResetSwing() => alreadyHit.Clear();
+    
 }

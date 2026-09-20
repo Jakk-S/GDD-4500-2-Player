@@ -7,7 +7,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private Sprite[] weaponSprites;
     [SerializeField] private SpriteRenderer sprRenderer;
     public bool RotateRight { get; set; } = true;
-    [SerializeField] private float rotSpeed = 1;
+    [SerializeField] private Weapon _weapon;
     
     
     private int rotateDir = 1;
@@ -15,7 +15,6 @@ public class WeaponController : MonoBehaviour
     
     void Start()
     {
-        rotSpeed *= 100;
         StartCoroutine(ChangeSprite());
     }
     void Update()
@@ -32,7 +31,7 @@ public class WeaponController : MonoBehaviour
             sprRenderer.flipX = true;
         }
         
-        transform.Rotate(0, 0, Time.deltaTime * rotateDir * rotSpeed);
+        transform.Rotate(0, 0, Time.deltaTime * rotateDir * _weapon.rotationSpeed);
     }
     
     IEnumerator ChangeSprite()
@@ -45,7 +44,7 @@ public class WeaponController : MonoBehaviour
                 sprCounter = 0;
             }
             sprRenderer.sprite = weaponSprites[sprCounter];
-            yield return new WaitForSeconds(30/rotSpeed);
+            yield return new WaitForSeconds(360f/(weaponSprites.Length * _weapon.rotationSpeed));
         }
     }
 }
