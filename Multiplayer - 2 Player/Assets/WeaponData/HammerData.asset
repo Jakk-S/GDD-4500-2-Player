@@ -13,7 +13,20 @@ MonoBehaviour:
   m_Name: HammerData
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   weaponName: 
-  baseDamage: 5
+  baseDamage: 7
   damageType: 0
-  fireRate: 0
-  range: 0
+  rotationSpeed: 80
+  rotationOffset: 0.4
+  weaponSprites:
+  - {fileID: -1466034614515278996, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: 2553706972939660761, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: 911711053186675664, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -1075750257559540321, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -2765060262423415488, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -5020668245785556713, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: 1227417724615848263, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -3768308011278783558, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -8726519276026243965, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -7919547100844718200, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: 7297685443697418431, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  - {fileID: -2670183032022074564, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
