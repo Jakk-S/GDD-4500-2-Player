@@ -1,3 +1,4 @@
+using Damage;
 using UnityEngine;
 
 public class WeaponCollision : MonoBehaviour
@@ -14,12 +15,12 @@ public class WeaponCollision : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         _weapon.OnCollided(collision);
-        
         foreach(string tag in tags)
         {
             if (collision.gameObject.CompareTag(tag))
             {
-                controller.RotateRight = !controller.RotateRight;
+                controller.rotateRight = !controller.rotateRight;
+                controller.ChangeDirection();
             }
         }
     }

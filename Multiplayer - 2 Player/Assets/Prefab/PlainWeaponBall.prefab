@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1871549391872380332}
   - component: {fileID: 8922605249733465097}
   - component: {fileID: 931217045941104484}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlainWeaponBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -551,5 +551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponController
   sprRenderer: {fileID: 5469890486872121059}
-  RotateRight: 1
-  _weapon: {fileID: 2010612019755646947}
+  weapon: {fileID: 2010612019755646947}
+  rotateType: 0
+  rotateRight: 1

@@ -15,8 +15,8 @@ MonoBehaviour:
   weaponName: Sword
   baseDamage: 5
   damageType: 0
-  rotationSpeed: 5
-  rotationOffset: 1
+  rotationSpeed: 100
+  rotationOffset: 0
   weaponSprites:
   - {fileID: 6590241358307580412, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: 3697234236650269008, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}

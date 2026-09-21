@@ -1,48 +1,67 @@
 using UnityEngine;
-using System.Collections;
-using VInspector;
 
-public class WeaponController : MonoBehaviour
+namespace Damage
 {
-    [SerializeField] private SpriteRenderer sprRenderer;
-    public bool RotateRight = true;
-    [SerializeField] private Weapon _weapon;
-    
-    private int rotateDir = 1;
-    private int sprCounter = 0;
-    
-    void Start()
+    public enum RotationType {SpeedDependent, NonSpeedDependent}
+    public class WeaponController : MonoBehaviour
     {
-        StartCoroutine(ChangeSprite());
-    }
-    void Update()
-    {
-        
-        if (RotateRight && rotateDir == 1)
+        [SerializeField] private SpriteRenderer sprRenderer;
+        [SerializeField] private Weapon weapon;
+        [SerializeField] private RotationType rotateType =  RotationType.SpeedDependent;
+         public bool rotateRight = true;
+    
+        private Rigidbody2D _rbBall;
+        private float _rSpeed;
+        private int _rotateDir = 1;
+        private int _sprCounter;
+
+        void Awake()
         {
-            rotateDir = -1;
-            sprRenderer.flipX = false;
+            ChangeDirection();
+            _rbBall = gameObject.GetComponentInParent<Rigidbody2D>();
+            weapon.SetOwner(gameObject);
         }
-        else if (!RotateRight && rotateDir == -1)
-        {
-            rotateDir = 1;
-            sprRenderer.flipX = true;
-        }
-        
-        transform.Rotate(0, 0, Time.deltaTime * rotateDir * _weapon.rotSpeed);
-    }
     
-    IEnumerator ChangeSprite()
-    {
-        while (true)
+        void Update()
         {
-            sprCounter++;
-            if (sprCounter > 11)
+            switch (rotateType)
             {
-                sprCounter = 0;
+                case RotationType.SpeedDependent:
+                    _rSpeed = weapon.rotSpeed * _rbBall.linearVelocity.magnitude;
+                    _rSpeed = Mathf.Clamp(_rSpeed, 0, weapon.rotSpeed * 10);
+                    break;
+                case RotationType.NonSpeedDependent:
+                    _rSpeed = weapon.rotSpeed;
+                    break;
             }
-            sprRenderer.sprite = _weapon.weaponSpr[sprCounter];
-            yield return new WaitForSeconds(360f/(_weapon.weaponSpr.Length * _weapon.rotSpeed));
+        
+            transform.Rotate(0, 0, Time.deltaTime * _rotateDir * _rSpeed);
+
+            CycleSprites();
+        }
+
+        public void ChangeDirection()
+        {
+            if (rotateRight && _rotateDir == 1)
+            {
+                _rotateDir = -1;
+                sprRenderer.flipX = false;
+            }
+            else if (!rotateRight && _rotateDir == -1)
+            {
+                _rotateDir = 1;
+                sprRenderer.flipX = true;
+            }
+        }
+        void CycleSprites()
+        {
+            float angle = transform.eulerAngles.z;
+            int segment = Mathf.FloorToInt(angle / 30) % weapon.weaponSpr.Length;
+            if (segment != _sprCounter)
+            {
+                _sprCounter = segment;
+                sprRenderer.sprite = weapon.weaponSpr[_sprCounter];
+            }
         }
     }
 }

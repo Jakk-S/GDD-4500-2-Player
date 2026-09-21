@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         Vector2 targetVelocity = _input.moveInput * moveSpeed;
-        
         _rb.linearVelocity = Vector2.MoveTowards(_rb.linearVelocity, targetVelocity, moveInertia);
         _rb.linearVelocity = Vector2.ClampMagnitude(_rb.linearVelocity, moveSpeed);
     }

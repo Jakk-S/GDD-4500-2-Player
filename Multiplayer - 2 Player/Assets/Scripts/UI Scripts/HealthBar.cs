@@ -31,7 +31,6 @@ public class HealthBar : MonoBehaviour
             healthSeq =  DOTween.Sequence();
             
             healthSeq.Append(healthBar.DOValue(current, 0.3f).SetEase(Ease.OutExpo))
-                //.Join(healthBarRect.DOPunchScale(Vector3.one * (delta/100), 0.2f, 8))
                 .Join(Camera.main.DOShakePosition(0.1f, 0.2f, 100))
                 .Join(foregroundImage.DOFillAmount(current/100f, 0.3f).SetDelay(0.5f).SetEase(Ease.OutExpo))
                 ;
