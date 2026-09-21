@@ -15,5 +15,19 @@ MonoBehaviour:
   weaponName: Sword
   baseDamage: 5
   damageType: 0
-  rotSpeed: 5
-  range: 0
+  rotationSpeed: 5
+  rotationOffset: 1
+  weaponSprites:
+  - {fileID: 6590241358307580412, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 3697234236650269008, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: -6319045205597174035, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 4573242434272234438, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 5737173127988210564, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 12531417167682612, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 8780312041421009489, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: -3719188659610595699, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: -3856961995820400898, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: -3856961995820400898, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: -8031648427135630022, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 2533849592599733371, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
+  - {fileID: 6114791893625452210, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}

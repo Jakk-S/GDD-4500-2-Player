@@ -9,11 +9,23 @@ public class Weapon : MonoBehaviour
 
     public void SetOwner(GameObject attacker) => owner = attacker;
 
-    public float rotationSpeed { get; private set; }
+    public float rotSpeed { get; private set; }
+    public Sprite[] weaponSpr { get ; private set; }
 
-    void Start()
+    void Awake()
     {
-        rotationSpeed = data.rotSpeed * 100;
+        //setting rotation speed and offset from weapon data
+        rotSpeed = data.rotationSpeed * 100;
+        transform.localPosition = new Vector3(0, data.rotationOffset, 0);
+
+        //Setting sprites in weapon from weapon data
+        weaponSpr = new Sprite[data.weaponSprites.Length];
+        int i = 0;
+        foreach (var sprite in data.weaponSprites)
+        {
+            weaponSpr[i] = sprite;
+            i++;
+        }
     }
     public void OnCollided(Collision2D collision)
     {
