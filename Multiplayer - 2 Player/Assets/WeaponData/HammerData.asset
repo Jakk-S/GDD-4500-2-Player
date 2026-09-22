@@ -16,7 +16,7 @@ MonoBehaviour:
   baseDamage: 7
   damageType: 0
   rotationSpeed: 80
-  rotationOffset: 0.4
+  rotationOffset: {x: 0, y: 0.4}
   weaponSprites:
   - {fileID: -1466034614515278996, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
   - {fileID: 2553706972939660761, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}

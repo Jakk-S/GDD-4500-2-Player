@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
             collider.enabled = true;
             //setting rotation speed and offset from weapon data
             rotSpeed = data.rotationSpeed;
-            transform.localPosition = new Vector3(0, data.rotationOffset, 0);
+            transform.localPosition = new Vector3(data.rotationOffset.x, data.rotationOffset.y, 0);
 
             //Setting sprites in weapon from weapon data
             weaponSpr = new Sprite[data.weaponSprites.Length];

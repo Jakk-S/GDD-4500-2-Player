@@ -7,7 +7,7 @@ public class WeaponData : ScriptableObject
     public float baseDamage;
     public DamageType damageType;
     public float rotationSpeed;
-    public float rotationOffset;
+    public Vector2 rotationOffset;
     public Sprite[] weaponSprites;
 
 }

@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 40a19fbf42baa1285af73e3342b4d459
+guid: 2a4c874bc90ee838fa766416b236165d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5737173127988210564
-    second: Sword_lofi_0
+      213: -4919050564584307253
+    second: Circle_lofi 1_0
   - first:
-      213: 12531417167682612
-    second: Sword_lofi_1
+      213: -4042317225858391360
+    second: Circle_lofi 1_1
   - first:
-      213: 8780312041421009489
-    second: Sword_lofi_2
+      213: 5600661415831825243
+    second: Circle_lofi 1_2
   - first:
-      213: -3719188659610595699
-    second: Sword_lofi_3
+      213: -5318742015138699157
+    second: Circle_lofi 1_3
   - first:
-      213: -3856961995820400898
-    second: Sword_lofi_4
+      213: 6758221288770588755
+    second: Circle_lofi 1_4
   - first:
-      213: 4573242434272234438
-    second: Sword_lofi_5
+      213: 2990782716001979951
+    second: Circle_lofi 1_5
   - first:
-      213: -8031648427135630022
-    second: Sword_lofi_6
+      213: -6291272489848278032
+    second: Circle_lofi 1_6
   - first:
-      213: 3697234236650269008
-    second: Sword_lofi_7
+      213: -4011911456946281999
+    second: Circle_lofi 1_7
   - first:
-      213: -6319045205597174035
-    second: Sword_lofi_8
+      213: -2997511509927192523
+    second: Circle_lofi 1_8
   - first:
-      213: 6590241358307580412
-    second: Sword_lofi_9
+      213: -5718247481334839557
+    second: Circle_lofi 1_9
   - first:
-      213: 6114791893625452210
-    second: Sword_lofi_10
+      213: -7814964332988834267
+    second: Circle_lofi 1_10
   - first:
-      213: 2533849592599733371
-    second: Sword_lofi_11
+      213: 3806322398625635507
+    second: Circle_lofi 1_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 110
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,265 +133,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword_lofi_4
+      name: Circle_lofi 1_0
       rect:
         serializedVersion: 2
-        x: 612
-        y: 7
-        width: 56
-        height: 157
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 79
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48b67a420988e9f40800000000000000
-      internalID: 5737173127988210564
+      spriteID: bc584c1e2950cbbb0800000000000000
+      internalID: -4919050564584307253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_5
+      name: Circle_lofi 1_1
       rect:
         serializedVersion: 2
-        x: 677
-        y: 6
-        width: 57
-        height: 158
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 239
+        y: 124
+        width: 122
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43cdfcce1458c2000800000000000000
-      internalID: 12531417167682612
+      spriteID: 0c2a44376edc6e7c0800000000000000
+      internalID: -4042317225858391360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_6
+      name: Circle_lofi 1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 55
-        height: 166
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 399
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 152fbf5184fe9d970800000000000000
-      internalID: 8780312041421009489
+      spriteID: b5b64e552eb89bd40800000000000000
+      internalID: 5600661415831825243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_7
+      name: Circle_lofi 1_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 8
-        width: 51
-        height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 559
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8ecf338e99c26cc0800000000000000
-      internalID: -3719188659610595699
+      spriteID: b6866bf21580036b0800000000000000
+      internalID: -5318742015138699157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_8
+      name: Circle_lofi 1_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 3
-        width: 57
-        height: 162
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 719
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efe71f6ff71597ac0800000000000000
-      internalID: -3856961995820400898
+      spriteID: 35057ae94760acd50800000000000000
+      internalID: 6758221288770588755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_3
+      name: Circle_lofi 1_5
       rect:
         serializedVersion: 2
-        x: 555
-        y: 6
-        width: 53
-        height: 158
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 879
+        y: 124
+        width: 112
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6cb0a8e83cb677f30800000000000000
-      internalID: 4573242434272234438
+      spriteID: f2e0dabc805618920800000000000000
+      internalID: 2990782716001979951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_9
+      name: Circle_lofi 1_6
       rect:
         serializedVersion: 2
-        x: 186
-        y: 2
-        width: 52
-        height: 161
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1034
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3581cb1f4ad98090800000000000000
-      internalID: -8031648427135630022
+      spriteID: 0f3f769c009e0b8a0800000000000000
+      internalID: -6291272489848278032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_1
+      name: Circle_lofi 1_7
       rect:
         serializedVersion: 2
-        x: 443
-        y: 6
-        width: 56
-        height: 158
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1199
+        y: 124
+        width: 112
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 059a3fe03f63f4330800000000000000
-      internalID: 3697234236650269008
+      spriteID: 1f1a56239c3d258c0800000000000000
+      internalID: -4011911456946281999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_2
+      name: Circle_lofi 1_8
       rect:
         serializedVersion: 2
-        x: 502
-        y: 8
-        width: 51
-        height: 158
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1359
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de6ceb08ddd3e48a0800000000000000
-      internalID: -6319045205597174035
+      spriteID: 53815a8c923b666d0800000000000000
+      internalID: -2997511509927192523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_0
+      name: Circle_lofi 1_9
       rect:
         serializedVersion: 2
-        x: 373
-        y: 9
-        width: 50
-        height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1519
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf9d20a499d357b50800000000000000
-      internalID: 6590241358307580412
+      spriteID: bf6c3495634b4a0b0800000000000000
+      internalID: -5718247481334839557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_11
+      name: Circle_lofi 1_10
       rect:
         serializedVersion: 2
-        x: 309
-        y: 6
-        width: 52
-        height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1679
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b6bbf664da1cd450800000000000000
-      internalID: 6114791893625452210
+      spriteID: 52e5ad7385bab8390800000000000000
+      internalID: -7814964332988834267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_lofi_10
+      name: Circle_lofi 1_11
       rect:
         serializedVersion: 2
-        x: 247
-        y: 0
-        width: 55
-        height: 163
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1839
+        y: 124
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b74ec2197ca0a2320800000000000000
-      internalID: 2533849592599733371
+      spriteID: 3bc91b60e06c2d430800000000000000
+      internalID: 3806322398625635507
       vertices: []
       indices: 
       edges: []
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8e07af9b3b2f88629bc30751b0cb6dac
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -408,22 +408,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Sword_lofi_0: 6590241358307580412
-      Sword_lofi_1: 3697234236650269008
-      Sword_lofi_10: 2533849592599733371
-      Sword_lofi_11: 6114791893625452210
-      Sword_lofi_2: -6319045205597174035
-      Sword_lofi_3: 4573242434272234438
-      Sword_lofi_4: 5737173127988210564
-      Sword_lofi_5: 12531417167682612
-      Sword_lofi_6: 8780312041421009489
-      Sword_lofi_7: -3719188659610595699
-      Sword_lofi_8: -3856961995820400898
-      Sword_lofi_9: -8031648427135630022
+      Circle_lofi 1_0: -4919050564584307253
+      Circle_lofi 1_1: -4042317225858391360
+      Circle_lofi 1_10: -7814964332988834267
+      Circle_lofi 1_11: 3806322398625635507
+      Circle_lofi 1_2: 5600661415831825243
+      Circle_lofi 1_3: -5318742015138699157
+      Circle_lofi 1_4: 6758221288770588755
+      Circle_lofi 1_5: 2990782716001979951
+      Circle_lofi 1_6: -6291272489848278032
+      Circle_lofi 1_7: -4011911456946281999
+      Circle_lofi 1_8: -2997511509927192523
+      Circle_lofi 1_9: -5718247481334839557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

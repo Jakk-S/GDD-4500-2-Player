@@ -16,7 +16,7 @@ MonoBehaviour:
   baseDamage: 5
   damageType: 0
   rotationSpeed: 100
-  rotationOffset: 0
+  rotationOffset: {x: 0, y: 0}
   weaponSprites:
   - {fileID: 6590241358307580412, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: 3697234236650269008, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
@@ -26,7 +26,6 @@ MonoBehaviour:
   - {fileID: 12531417167682612, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: 8780312041421009489, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: -3719188659610595699, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
-  - {fileID: -3856961995820400898, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: -3856961995820400898, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: -8031648427135630022, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
   - {fileID: 2533849592599733371, guid: 40a19fbf42baa1285af73e3342b4d459, type: 3}
