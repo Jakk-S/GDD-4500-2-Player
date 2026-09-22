@@ -24,6 +24,7 @@ public class HealthBar : MonoBehaviour
     }
     void Update()
     {
+        if (pHealth == null) return;
         float current =  pHealth.CurrentHealth;
         float delta = current - lastHealth;
         
