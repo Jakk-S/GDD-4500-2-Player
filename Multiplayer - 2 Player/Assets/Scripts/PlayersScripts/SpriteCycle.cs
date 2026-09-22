@@ -22,6 +22,7 @@ public class SpriteCycle : MonoBehaviour
         
         float angle = pivot.eulerAngles.z;
         int segment = Mathf.FloorToInt(angle / 30) % sprites.Length;
+        segment = ((segment % sprites.Length) + sprites.Length) % sprites.Length;
         if (segment != _sprCounter)
         {
             _sprCounter = segment;
