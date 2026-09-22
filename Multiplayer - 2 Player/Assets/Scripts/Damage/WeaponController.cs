@@ -37,30 +37,33 @@ namespace Damage
         
             transform.Rotate(0, 0, Time.deltaTime * _rotateDir * _rSpeed);
 
-            CycleSprites();
+            CycleSprites(weapon.weaponSpr);
         }
 
         public void ChangeDirection()
         {
+            Vector3 scale =  transform.localScale;
             if (rotateRight && _rotateDir == 1)
             {
                 _rotateDir = -1;
-                sprRenderer.flipX = false;
+                scale.x = 1;
             }
             else if (!rotateRight && _rotateDir == -1)
             {
                 _rotateDir = 1;
-                sprRenderer.flipX = true;
+                scale.x = -1;
             }
+
+            transform.localScale = scale;
         }
-        void CycleSprites()
+        void CycleSprites(Sprite[] sprites)
         {
             float angle = transform.eulerAngles.z;
-            int segment = Mathf.FloorToInt(angle / 30) % weapon.weaponSpr.Length;
+            int segment = Mathf.FloorToInt(angle / 30) % sprites.Length;
             if (segment != _sprCounter)
             {
                 _sprCounter = segment;
-                sprRenderer.sprite = weapon.weaponSpr[_sprCounter];
+                sprRenderer.sprite = sprites[_sprCounter];
             }
         }
     }
