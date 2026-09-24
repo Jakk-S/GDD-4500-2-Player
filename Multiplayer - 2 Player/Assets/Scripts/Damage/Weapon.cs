@@ -1,6 +1,7 @@
 using Damage;
 using UnityEngine;
 using  DG.Tweening;
+using TMPro;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private WeaponData data;
@@ -10,6 +11,8 @@ public class Weapon : MonoBehaviour
 
     public float rotSpeed { get; private set; }
     public Sprite[] weaponSpr { get ; private set; }
+
+    [SerializeField] private TextMeshProUGUI dmgText;
 
     void Awake()
     {
@@ -31,6 +34,8 @@ public class Weapon : MonoBehaviour
                 weaponSpr[i] = sprite;
                 i++;
             }
+
+            dmgText.text = $"DMG: {data.baseDamage}";
         }
     }
     public void OnCollided(Collision2D collision)
@@ -45,7 +50,9 @@ public class Weapon : MonoBehaviour
             Source = owner,
             HitPoint = collision.GetContact(0).point
         };
-        
+
+        dmgText.text = $"DMG: {data.baseDamage}";
+
         DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0f, 0.1f)
             .SetUpdate(true).SetLink(gameObject) 
             .OnComplete(() => DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1f, 0.3f).SetUpdate(true)).SetLink(gameObject);

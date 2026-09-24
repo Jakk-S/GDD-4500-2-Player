@@ -10,6 +10,8 @@ public class DeathManager : MonoBehaviour
     [SerializeField] private Color player2Color;
     
     [SerializeField] private TextMeshProUGUI winText;
+
+    public bool gameOver { get; private set; }
     
     void OnEnable()
     {
@@ -40,7 +42,9 @@ public class DeathManager : MonoBehaviour
     private void HandleDeath(PlayerHealth loser, PlayerHealth winner)
     {
         Destroy(loser.gameObject);
-        winText.text = winner.name +" wins!";
+        winText.text = winner.name +" wins!\nTo reset: Press R";
+
+        gameOver = true;
 
         StartCoroutine(WinAnim());
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InputHandler : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class InputHandler : MonoBehaviour
 
     private Controls _controls;
     private PlayerInfo _playerInfo;
+
+    [SerializeField] DeathManager dm;
 
     private void Awake()
     {
@@ -16,6 +19,8 @@ public class InputHandler : MonoBehaviour
         
         _controls.Player.Move.performed += OnMovePerformed;
         _controls.Player.Move.canceled += OnMoveCanceled;
+
+        _controls.Player.Reset.performed += OnResetPerformed;
     }
 
     void OnEnable() => _controls.Player.Enable();
@@ -29,5 +34,11 @@ public class InputHandler : MonoBehaviour
     private void OnMoveCanceled(InputAction.CallbackContext context)
     {
         moveInput = Vector2.zero;
+    }
+
+    private void OnResetPerformed(InputAction.CallbackContext context)
+    {
+        Debug.Log("RESET ATTEMPTED");
+        if (dm.gameOver) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
