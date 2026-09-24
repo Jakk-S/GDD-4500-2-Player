@@ -12,8 +12,25 @@ public class PlayerMovement : MonoBehaviour
     {
         _input = GetComponent<InputHandler>();
          _rb = GetComponent<Rigidbody2D>();
+
+         //enabled = false;
+
+         //GameManager.instance.OnStateChanged += HandleStateChanged;
     }
 
+    // private void OnDestroy()
+    // {
+    //     if (GameManager.instance != null)
+    //     {
+    //         GameManager.instance.OnStateChanged -= HandleStateChanged;
+    //     }
+    // }
+
+    // private void HandleStateChanged(GameState state)
+    // {
+    //     //enable script when current state is Playing
+    //     enabled = (state == GameState.Playing);
+    // }
 
     void FixedUpdate()
     {
