@@ -9,5 +9,5 @@ public class WeaponData : ScriptableObject
     public float rotationSpeed;
     public Vector2 rotationOffset;
     public Sprite[] weaponSprites;
-
+    public float damageChange;
 }

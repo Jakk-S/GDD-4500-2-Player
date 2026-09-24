@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI dmgText;
 
+    private int numHits = 0;
+
     void Awake()
     {
         collider = GetComponent<BoxCollider2D>();
@@ -43,15 +45,17 @@ public class Weapon : MonoBehaviour
         if(data == null) return;
         if(!collision.gameObject.TryGetComponent<IDamageable>(out var target)) return;
 
+        numHits++;
+
         var info = new DamageInfo
         {
-            Amount = data.baseDamage,
+            Amount = data.baseDamage + (data.damageChange * numHits),
             Type = data.damageType,
             Source = owner,
             HitPoint = collision.GetContact(0).point
         };
 
-        dmgText.text = $"DMG: {data.baseDamage}";
+        dmgText.text = $"DMG: {data.baseDamage + (data.damageChange * numHits)}";
 
         DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 0f, 0.1f)
             .SetUpdate(true).SetLink(gameObject) 
