@@ -14,7 +14,7 @@ public class FastTutorial : MonoBehaviour
     
     void Awake()
     {
-        DisableMouse();
+        
         
         _sprGroup = GetComponent<SpriteGroup>();
         _controls = new Controls();
@@ -36,11 +36,7 @@ public class FastTutorial : MonoBehaviour
         _hasMoved = true;
     }
 
-    void DisableMouse()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+   
     
     
 }

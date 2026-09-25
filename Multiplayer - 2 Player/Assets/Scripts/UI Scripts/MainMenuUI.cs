@@ -1,13 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
-    [SerializeField] private Button startButton;
+    [SerializeField] private Button playButton;
 
+    void OnEnable()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playButton.gameObject);
+    }
     void Start()
     {
-        startButton.onClick.AddListener(OnStartClicked);
+        DisableMouse();
+        playButton.onClick.AddListener(OnStartClicked);
         GameManager.instance.OnStateChanged += HandleStateChanged;
     }
 
@@ -21,11 +28,18 @@ public class MainMenuUI : MonoBehaviour
 
     private void OnStartClicked()
     {
+        
         GameManager.instance.StartGame();
     }
 
     private void HandleStateChanged(GameState state)
     {
         menuPanel.SetActive(state == GameState.MainMenu);
+    }
+    
+    void DisableMouse()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
