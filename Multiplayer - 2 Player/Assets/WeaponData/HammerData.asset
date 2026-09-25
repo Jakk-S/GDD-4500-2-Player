@@ -30,3 +30,4 @@ MonoBehaviour:
   - {fileID: -7919547100844718200, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
   - {fileID: 7297685443697418431, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
   - {fileID: -2670183032022074564, guid: a205accaabf34b4b5a9a5fe35882ddd7, type: 3}
+  damageChange: 0
