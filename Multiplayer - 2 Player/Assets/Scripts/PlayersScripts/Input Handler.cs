@@ -39,6 +39,6 @@ public class InputHandler : MonoBehaviour
     private void OnResetPerformed(InputAction.CallbackContext context)
     {
         Debug.Log("RESET ATTEMPTED");
-        if (dm.gameOver) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (dm.gameOver) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

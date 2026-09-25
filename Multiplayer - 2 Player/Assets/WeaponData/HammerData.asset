@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7462d8cafcd0e2aad1fbc163c2fec1, type: 3}
   m_Name: HammerData
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  weaponName: 
+  weaponName: Hammer
   baseDamage: 7
   damageType: 0
   rotationSpeed: 80

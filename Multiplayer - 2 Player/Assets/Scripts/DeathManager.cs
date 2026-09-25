@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class DeathManager : MonoBehaviour
 {
 
@@ -10,8 +11,8 @@ public class DeathManager : MonoBehaviour
     [SerializeField] private Color player2Color;
     
     [SerializeField] private TextMeshProUGUI winText;
-
-    public bool gameOver { get; private set; }
+    
+    public bool gameOver = false;
     
     void OnEnable()
     {
@@ -41,18 +42,18 @@ public class DeathManager : MonoBehaviour
 
     private void HandleDeath(PlayerHealth loser, PlayerHealth winner)
     {
-        Destroy(loser.gameObject);
-        winText.text = winner.name +" wins!\nTo reset: Press R";
-
-        gameOver = true;
-
-        StartCoroutine(WinAnim());
+        winText.text = winner.name +" wins!";
+        StartCoroutine(WinRoutine(loser));
     }
 
-    IEnumerator WinAnim()
+    IEnumerator WinRoutine(PlayerHealth loser)
     {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(loser.gameObject);
         Color c = winText.color;
-        while (true)
+        
+        int counter = 0;
+        while (counter < 10)
         {
             c.a = 1;
             winText.color = c;
@@ -60,7 +61,11 @@ public class DeathManager : MonoBehaviour
             c.a = 0;
             winText.color = c;
             yield return new WaitForSeconds(0.5f);
+            counter++;
         }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOver = true;
     }
     
 }

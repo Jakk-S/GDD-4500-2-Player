@@ -16,23 +16,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     private bool isDead;
     
     void Awake()=> CurrentHealth = maxHealth;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            ApplyDamage(new DamageInfo{Amount = 10f});
-        }
-    }
+    
 
     public void ApplyDamage(DamageInfo info)
     {
-        if (isDead) return;
-
         CurrentHealth = Mathf.Max(0, CurrentHealth - info.Amount);
         OnDamaged?.Invoke(info);
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
-
+        
         if (CurrentHealth <= 0)
         {
             Die();
