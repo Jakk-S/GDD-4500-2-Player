@@ -20,12 +20,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void ApplyDamage(DamageInfo info)
     {
-        if (isDead) return;
-   
         CurrentHealth = Mathf.Max(0, CurrentHealth - info.Amount);
         OnDamaged?.Invoke(info);
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
-
+        
         if (CurrentHealth <= 0)
         {
             Die();

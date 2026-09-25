@@ -6,16 +6,20 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private Button playButton;
 
+    [SerializeField] private TransitionScript transition;
+
     void OnEnable()
     {
+        DisableMouse();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(playButton.gameObject);
     }
     void Start()
     {
-        DisableMouse();
+        transition.DoEndTransition();
         playButton.onClick.AddListener(OnStartClicked);
         GameManager.instance.OnStateChanged += HandleStateChanged;
+        
     }
 
     void OnDestroy()
@@ -28,8 +32,8 @@ public class MainMenuUI : MonoBehaviour
 
     private void OnStartClicked()
     {
-        
-        GameManager.instance.StartGame();
+        transition.DoTransition(onMidpoint: () =>  GameManager.instance.StartGame());
+       
     }
 
     private void HandleStateChanged(GameState state)
@@ -40,6 +44,5 @@ public class MainMenuUI : MonoBehaviour
     void DisableMouse()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 }
