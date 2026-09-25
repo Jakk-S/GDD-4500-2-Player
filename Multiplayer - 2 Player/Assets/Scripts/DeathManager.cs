@@ -59,11 +59,7 @@ public class DeathManager : MonoBehaviour
             c.a = 0;
             winText.color = c;
             yield return new WaitForSeconds(0.5f);
-            counter++;
         }
-        
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
 }
