@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     
     public GameState currentState = GameState.MainMenu;
     public event Action<GameState> OnStateChanged;
+    
+   
 
     void Awake()
     {

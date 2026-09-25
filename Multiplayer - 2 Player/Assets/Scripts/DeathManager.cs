@@ -12,6 +12,8 @@ public class DeathManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI winText;
     
+    public bool gameOver = false;
+    
     void OnEnable()
     {
         player1.OnDeath += OnPlayerOneDeath;
@@ -51,7 +53,7 @@ public class DeathManager : MonoBehaviour
         Color c = winText.color;
         
         int counter = 0;
-        while (counter < 10f)
+        while (counter < 10)
         {
             c.a = 1;
             winText.color = c;
@@ -59,7 +61,11 @@ public class DeathManager : MonoBehaviour
             c.a = 0;
             winText.color = c;
             yield return new WaitForSeconds(0.5f);
+            counter++;
         }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOver = true;
     }
     
 }
